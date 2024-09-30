@@ -1,0 +1,57 @@
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+
+# Visual Studio Code files
+.vscode/
+
+# Rider files
+.idea/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+
+# Test Results
+TestResults/
+*.trx
+
+# Publish results
+publish/
+
+# Environment variable files
+*.env
+*.local
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# User-specific files
+*.user
+*.suo
+*.userprefs
+
+# Ignore the following folders
+node_modules/
+wwwroot/lib/
+
+# OS generated files
+.DS_Store
+Thumbs.db
