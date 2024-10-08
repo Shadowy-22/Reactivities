@@ -9,6 +9,9 @@ x86/
 [Ll]og/
 [Ll]ogs/
 
+# Unncesary DB files
+*.db
+
 # Visual Studio files
 .vs/
 *.suo
