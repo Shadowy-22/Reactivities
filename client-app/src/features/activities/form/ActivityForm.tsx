@@ -5,13 +5,15 @@ import { ChangeEvent, useState } from "react"
 interface Props {
   activity: Activity | undefined,
   closeForm: () => void
-  createOrEdit: (activity: Activity) => void
+  createOrEdit: (activity: Activity) => void,
+  submitting: boolean
 }
 
 const ActivityForm = ({
-  activity: selectedActivity, 
+  activity: selectedActivity, // Alias
   closeForm, 
-  createOrEdit
+  createOrEdit,
+  submitting
 }: Props) => {
   
   const initialState = selectedActivity ?? {
@@ -56,7 +58,8 @@ const ActivityForm = ({
           value={activity.category}
           onChange={handleInputChange}  
         />
-        <Form.Input 
+        <Form.Input
+          type="date" 
           name="date"
           placeholder="Date" 
           value={activity.date}
@@ -74,7 +77,7 @@ const ActivityForm = ({
           value={activity.venue}
           onChange={handleInputChange} 
         />
-        <Button floated="right" positive type="submit" content="Submit" />
+        <Button loading={submitting} floated="right" positive type="submit" content="Submit" />
         <Button floated="right" type="button" content="Cancel" onClick={closeForm} />
       </Form>
     </Segment>
