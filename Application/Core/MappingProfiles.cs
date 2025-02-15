@@ -8,7 +8,6 @@ namespace Application.Core
         public MappingProfiles()
         {
             CreateMap<Activity, Activity>(); // Maps from one activity to other. E.g: Updating a register
-            
         }
     }
 }
