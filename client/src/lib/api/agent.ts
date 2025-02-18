@@ -1,4 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
+import { store } from '../stores/store';
 
 // Create an Axios instance for Activities
 const apiClient = axios.create({
@@ -19,7 +20,14 @@ apiClient.interceptors.response.use(async response => {
     } catch (error) {
         console.log(error);
         return await Promise.reject(error);
+    } finally {
+        store.uiStore.isIdle()
     }
+})
+
+apiClient.interceptors.request.use(config => {
+    store.uiStore.isBusy()
+    return config;
 })
 
 // Generalization of API requests
