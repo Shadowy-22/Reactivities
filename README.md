@@ -20,7 +20,7 @@ This project showcases proficiency in modern software development practices, inc
 
 ## Folder Structure
 
-```console
+```bash
 Reactivities/                     # Root project directory
 │-- API/                          # Backend API (ASP.NET Core)
 │   │-- Controllers/              # API Controllers handling HTTP requests
